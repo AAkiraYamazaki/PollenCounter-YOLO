@@ -5,7 +5,7 @@ Deep learning–based inference tool for pollen germination rate and viability e
 ## 🚀 Run on Google Colab (No installation required)
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
-(https://colab.research.google.com/github/yourname/repo/blob/main/colab/inference_colab.ipynb)
+(https://colab.research.google.com/github/AAkiraYamazaki/PollenCounter-YOLOv5/blob/main/colab/PollenCounter-YOLOv5.ipynb)
 
 Click the button above and run all cells.
 
