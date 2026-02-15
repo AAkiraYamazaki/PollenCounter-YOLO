@@ -1,4 +1,4 @@
-# PollenCounter-YOLOv5
+# PollenCounter-YOLO
 
 Deep learning–based inference tool for pollen germination rate and viability estimation from microscopic images.
 
