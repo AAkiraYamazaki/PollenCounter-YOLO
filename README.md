@@ -51,9 +51,9 @@ Classifies them as:
 	•	Germinated / Non-germinated  
 	•	Viable / Non-viable  
   
-Calculates:  
-	•	Pollen germination rate (%)  
-	•	Pollen viability (%)  
+Outputs:  
+	•	Counts of germinated and non-germinated pollen grains  
+	•	Counts of viable and non-viable pollen grains 
 
 ## 📂 How to Use (Step-by-step)
 	1.	Open Colab
