@@ -2,6 +2,12 @@
 
 Deep learning–based inference tool for pollen germination rate and viability estimation from microscopic images.
 
+
+> ⚠ License Notice  
+> This project is based on YOLOv5 by Ultralytics and is distributed under the GNU General Public License v3.0 (GPL-3.0).  
+> Modifications have been made to the original training and inference workflow. See the LICENSE file for details.  
+
+
 ## 🚀 Run on Google Colab (No installation required)
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
@@ -10,10 +16,26 @@ Deep learning–based inference tool for pollen germination rate and viability e
 Click the button above and run all cells.
 
 ## 📌 What this repository provides
-	•	✅ Trained weights for:
+		•	✅ Trained weights for:
 	    	Pollen germination model
 	    	Pollen viability model
-	•	✅ Executable Google Colab notebook
+		• 	✅ Modified inference pipeline supporting merged multi-dataset result export
+
+		•	✅ Executable Google Colab notebook
+
+## 🔧 About the YOLOv5 Base
+
+This repository is derived from YOLOv5 (Ultralytics), originally released under the GPL-3.0 license.  
+
+Original repository:  
+https://github.com/ultralytics/yolov5  
+
+Modifications in this project include:  
+	•	Customized output format for pollen trait quantification  
+	•	Added functionality to merge multiple datasets into unified result files  
+	•	Adjusted inference pipeline for pollen germination and viability estimation  
+
+All modifications are released under GPL-3.0 in accordance with the original license.  
 
 ## 📷 Input Image Requirements
 	•	Microscopic image (JPG or PNG)
@@ -55,6 +77,12 @@ If you use this model, please cite:
   *Akira Yamazaki, Natsuki Uematsu, Taro Sano, Yoshito Tatsumi, Keiji Mine, Hiroshi Asao, Haruyuki Atsumi, Yuhei Ueda, Ginyu Inaba, Kyosuke Kawabe, Kenichiro Yasuba, Yuichi Yoshida.
 Deep learning–based phenotyping of strawberry pollen reproductive capacity robust to imaging conditions enables multi-site analysis of environmental influences. Under Review.*
 
+## 📜 License
+
+This repository is distributed under the GNU General Public License v3.0 (GPL-3.0).  
+
+A copy of the license is provided in the LICENSE file.  
+This project includes modified components of YOLOv5, which is also licensed under GPL-3.0.  
 
 ## 🙏 Acknowledgments
 
