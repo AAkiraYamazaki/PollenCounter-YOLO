@@ -38,8 +38,8 @@ Modifications in this project include:
 All modifications are released under AGPL-3.0 in accordance with the original license.  
 
 ## 📷 Input Image Requirements
-	•	Microscopic image (JPG or PNG)
-	•	Recommended resolution: 640px (long side)
+	•	Microscopic image (JPG)
+	•	Recommended resolution: 640~ px (long side)
 	•	Bright-field microscope images
 
 ## 📊 Output
