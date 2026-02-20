@@ -1,4 +1,12 @@
 # Ultralytics YOLOv5 🚀, AGPL-3.0 license
+# -------------------------------------------------------------
+# Modified by Akira Yamazaki (2026)
+# Based on YOLOv5 (AGPL-3.0)
+# Modifications:
+# - Changed output format
+# - Added multi-dataset merge functionality
+# -------------------------------------------------------------
+
 """
 Run YOLOv5 detection inference on images, videos, directories, globs, YouTube, webcam, streams, etc.
 
@@ -37,7 +45,7 @@ from pathlib import Path
 
 import torch
 
-#(Added in v2)
+#[PollenCounter-YOLO](Added in PollenCounter-YOLO)
 import glob
 
 FILE = Path(__file__).resolve()
@@ -172,10 +180,10 @@ def run(
 
     # Dataloader
     bs = 1  # batch_size
-    
-    #(Added in v2)
+
+    #[PollenCounter-YOLO](Added in PollenCounter-YOLO)
     multi_folder = False
-    
+
     if webcam:
         view_img = check_imshow(warn=True)
         dataset = LoadStreams(source, img_size=imgsz, stride=stride, auto=pt, vid_stride=vid_stride)
@@ -183,7 +191,7 @@ def run(
     elif screenshot:
         dataset = LoadScreenshots(source, img_size=imgsz, stride=stride, auto=pt)
 
-    #(Added in v2)
+    #[PollenCounter-YOLO](Added in PollenCounter-YOLO)
     elif not glob.glob(source+'/*.[jJ][pP][gG]') and glob.glob(source+'/**/*.[jJ][pP][gG]') :
         dataset = LoadImages(source+'/**', img_size=imgsz, stride=stride, auto=pt, vid_stride=vid_stride)
         multi_folder = True
@@ -228,7 +236,7 @@ def run(
         # Define the path for the CSV file
         csv_path = save_dir / "predictions.csv"
 
-        #(Added in v2) Define the path for the CSV file
+        #[PollenCounter-YOLO](Added in PollenCounter-YOLO) Define the path for the CSV file
         csv_path_v2 = save_dir / "results.csv"
 
         # Create or append to the CSV file
@@ -241,7 +249,7 @@ def run(
                     writer.writeheader()
                 writer.writerow(data)
 
-        #(Added in v2)Create or append to the CSV file
+        #[PollenCounter-YOLO](Added in PollenCounter-YOLO) Create or append to the CSV file
         def write_to_csv_v2(folder_name,image_name, class_0, class_1,name_class_0,name_class_1):
             if not csv_path_v2.is_file():
                 with open(csv_path_v2, "w") as f:
@@ -250,7 +258,7 @@ def run(
             with open(csv_path_v2, "a") as f:
                 writer = csv.writer(f)
                 writer.writerow([folder_name,image_name,class_0,class_1])
-                        
+
 
         # Process predictions
         for i, det in enumerate(pred):  # per image
@@ -264,7 +272,7 @@ def run(
             p = Path(p)  # to Path
             save_path = str(save_dir / p.name)  # im.jpg
 
-            #(Added in v2)
+            #[PollenCounter-YOLO](Added in PollenCounter-YOLO)
             if multi_folder:
                 save_path = str(save_dir / (p.parent.name +"_"+ p.name))
 
@@ -310,13 +318,13 @@ def run(
                     if save_crop:
                         save_one_box(xyxy, imc, file=save_dir / "crops" / names[c] / f"{p.stem}.jpg", BGR=True)
 
-                # (Added in v2)Write results
+                # [PollenCounter-YOLO](Added in PollenCounter-YOLO) Write results
                 n_0 = (det[:, 5] == 0).sum()  # detections class_0
                 n_1 = (det[:, 5] == 1).sum()  # detections class_1
-                write_to_csv_v2(p.parent.name,p.name,f"{n_0}",f"{n_1}",f"{names[0]}",f"{names[1]}")   
-            #(Added in v2)
+                write_to_csv_v2(p.parent.name,p.name,f"{n_0}",f"{n_1}",f"{names[0]}",f"{names[1]}")
+            #[PollenCounter-YOLO](Added in PollenCounter-YOLO)
             else:
-                write_to_csv_v2(p.parent.name,p.name,0,0,"class_0","class_1")      
+                write_to_csv_v2(p.parent.name,p.name,0,0,"class_0","class_1")
 
             # Stream results
             im0 = annotator.result()
