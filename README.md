@@ -55,6 +55,9 @@ Outputs:
 	•	Counts of germinated and non-germinated pollen grains  
 	•	Counts of viable and non-viable pollen grains 
 
+Note:  
+	In this repository, pollen viability was evaluated based on **acetocarmine staining**.
+
 ## 📂 How to Use (Step-by-step)
 	1.	Open Colab
 	2.	Upload your microscopic image
