@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Yamazaki
+    given-names: Akira
+    orcid: https://orcid.org/0000-0001-8259-0451
+  - family-names: Uematsu
+    given-names: Natsuki
+  - family-names: Sano
+    given-names: Taro
+  - family-names: Tatsumi
+    given-names: Yoshito
+  - family-names: Mine
+    given-names: Keiji
+  - family-names: Asao
+    given-names: Hiroshi
+  - family-names: Atsumi
+    given-names: Haruyuki
+  - family-names: Ueda
+    given-names: Yuhei
+  - family-names: Inaba
+    given-names: Ginyu
+  - family-names: Kawabe
+    given-names: Kyosuke
+  - family-names: Yasuba
+    given-names: Kenichiro
+  - family-names: Yoshida
+    given-names: Yuichi
+title: "PollenCounter-YOLO"
+version: 1.0.0
+identifiers:
+  - type: doi
+  - value: 10.5281/zenodo.18722650
