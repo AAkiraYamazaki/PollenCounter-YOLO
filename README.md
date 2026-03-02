@@ -78,7 +78,7 @@ Training image size: 640 px
 If you use this model, please cite:  
 
   *Akira Yamazaki, Natsuki Uematsu, Taro Sano, Yoshito Tatsumi, Keiji Mine, Hiroshi Asao, Haruyuki Atsumi, Yuhei Ueda, Ginyu Inaba, Kyosuke Kawabe, Kenichiro Yasuba, Yuichi Yoshida.
-Deep learning–based phenotyping of strawberry pollen reproductive capacity robust to imaging conditions enables multi-site analysis of environmental influences. Under Review.*
+Deep learning-enabled multi-site phenotyping reveals cultivar-specific environmental responses of strawberry pollen under winter cultivation. Manuscript under review.*
 
 ## 📜 License
 
